@@ -48,7 +48,7 @@ begin
     exit
   end
 
-  from_list_members = gb.lists.members({:id => from_list_id})["data"]
+  from_list_members = gb.lists.members({:id => from_list_id, :start => 0, :limit => 1000})["data"]
 
 rescue Gibbon::MailChimpError => e
   log.fatal "MailChimp error #{e.code}: {#{e.message}. Chimp Minder abort!"
