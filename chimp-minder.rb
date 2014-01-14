@@ -96,7 +96,7 @@ from_list_members.each do |member|
 
       if ENV["REMOVE_DUPES"] == "true"
         begin
-          Gibbon::API.lists.unsubscribe({
+          gb.lists.unsubscribe({
             :id => from_list_id,
             :email => {email: member["email"]},
             :delete_member => true,
