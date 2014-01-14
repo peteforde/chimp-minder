@@ -3,6 +3,7 @@
 .bundle
 .config
 .env
+chimp-minder.log
 coverage
 InstalledFiles
 lib/bundler/man
